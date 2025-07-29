@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viaje Facilito - Calculadora de Presupuesto</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="blue z-depth-2">
+      <div class="nav-wrapper container">
+        <a href="#" class="brand-logo center">Viaje Facilito</a>
+      </div>
+    </nav>
+
+    <div class="main-wrapper">
+      <div class="container custom-card-container">
+        <div class="row">
+          <div class="col s12 m8 offset-m2 l8 offset-l2">
+            <div class="card z-depth-4">
+              <div class="card-content">
+                <span class="card-title center-align blue-text text-darken-2"
+                  >Calcula tu Presupuesto de Viaje</span
+                >
+                <form id="vacationCalc">
+                  <div class="input-field">
+                    <i class="material-icons prefix">flight</i>
+                    <input type="text" id="destiny" class="validate" required />
+                    <label for="destiny">Destino</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">attach_money</i>
+                    <input
+                      type="number"
+                      id="budget"
+                      class="validate"
+                      required
+                    />
+                    <label for="budget">Presupuesto Total</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">hotel</i>
+                    <input
+                      type="number"
+                      id="acomodation"
+                      class="validate"
+                      required
+                    />
+                    <label for="acomodation">Costo de Alojamiento</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">directions_car</i>
+                    <input
+                      type="number"
+                      id="transport"
+                      class="validate"
+                      required
+                    />
+                    <label for="transport">Costo de Transporte</label>
+                  </div>
+                  <div class="input-field">
+                    <i class="material-icons prefix">local_dining</i>
+                    <input type="number" id="food" class="validate" required />
+                    <label for="food">Costo de Comida</label>
+                  </div>
+                  <button
+                    class="btn waves-effect waves-light blue darken-1 z-depth-2 right"
+                    type="submit"
+                    name="action"
+                  >
+                    Calcular
+                    <i class="material-icons right">send</i>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col s12 m8 offset-m2 l8 offset-l2">
+            <div class="card z-depth-3 blue-grey lighten-5">
+              <div class="card-content black-text">
+                <span class="card-title">Resumen de tu Viaje</span>
+                <div id="result">
+                  <p>Ingresa los datos para calcular tu presupuesto.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
