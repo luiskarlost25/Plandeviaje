@@ -88,7 +88,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Pie de página
         doc.setFontSize(10);
-        doc.text("Generado por Viaje Facilito", 105, 280, null, null, "center");
+        doc.text("Generado por ViajeFacilito.com", 105, 280, null, null, "center");
+        doc.text("desarrollo systemsPiura : luisTorres ", 105, 280, null, null, "center");
+
 
         // Guardar el PDF
         doc.save(`Presupuesto_Viaje_a_${destiny.replace(/\s+/g, '_')}.pdf`);
