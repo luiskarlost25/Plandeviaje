@@ -1,0 +1,71 @@
+body {
+  background-color: #212121; /* Gris carboncillo oscuro */
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  color: #e0e0e0; /* Color de texto claro para el fondo oscuro */
+}
+
+/* El contenedor principal que simula el modal */
+.main-wrapper {
+  flex: 1 0 auto; /* Permite que este contenedor ocupe el espacio restante */
+  display: flex; /* Usamos flexbox para centrar su contenido */
+  align-items: center; /* Centra verticalmente */
+  justify-content: center; /* Centra horizontalmente */
+  padding: 20px 0; /* Espacio arriba y abajo para que no esté pegado a los bordes */
+}
+
+/* Contenedor Materialize para limitar el ancho y centrar los cards */
+.custom-card-container {
+  width: 100%; /* Ocupa todo el ancho disponible del main-wrapper */
+  max-width: 900px; /* Aumentado ligeramente para dar un poco más de espacio */
+}
+
+/* Estilo para los cards */
+.card {
+  margin-top: 20px; /* Reduce el margen superior/inferior ya que el wrapper ya tiene padding */
+  margin-bottom: 20px;
+}
+
+/* Ajustes para el texto dentro de las tarjetas si el fondo es claro */
+.card .card-content span.card-title,
+.card .card-content p {
+  color: #303030; /* Texto oscuro para que se lea bien sobre el fondo claro de la tarjeta */
+}
+
+/* Asegura que los íconos de Material Icons en los input-field se vean bien */
+.input-field .prefix {
+  margin-top: 0.5rem; /* Ajuste para alinear el ícono con el input */
+  color: #64b5f6; /* Un azul más claro para los íconos en los inputs */
+}
+
+/* Color de las etiquetas de los inputs */
+.input-field label {
+  color: #757575; /* Gris para las etiquetas */
+}
+/* Color de las etiquetas cuando están activas/enfocadas */
+.input-field input[type="text"]:focus + label,
+.input-field input[type="number"]:focus + label {
+  color: #2196f3 !important; /* Azul de Materialize al enfocar */
+}
+/* Color del borde inferior de los inputs al enfocar */
+.input-field input[type="text"]:focus,
+.input-field input[type="number"]:focus {
+  border-bottom: 1px solid #2196f3 !important; /* Azul de Materialize al enfocar */
+  box-shadow: 0 1px 0 0 #2196f3 !important;
+}
+
+/* Eliminar el placeholder de los inputs, Materialize usa las etiquetas */
+input::placeholder {
+  color: transparent;
+}
+
+/* Ajuste para el botón para que se alinee a la derecha */
+form button.btn {
+  margin-top: 15px;
+}
+
+/* Esconder los íconos grandes si ya no los usas para el display de resultados */
+.icons {
+  display: none; /* O puedes comentarlo si prefieres eliminarlos del HTML */
+}
